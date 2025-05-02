@@ -24,6 +24,7 @@ export const startListeningToNativeEvents = (onDataReceived) => {
   const subscriptionAndroid = nativeModuleEmitter.addListener(
     'dataFromNativeAndroid',
     (data) => {
+      console.log('Received data from Android:', data);
       onDataReceived(data);
     }
   );

@@ -20,7 +20,7 @@ class NativeEventEmitterModule (reactContext :ReactApplicationContext) : ReactCo
     @ReactMethod
     fun startEmittingData() {
         Handler(Looper.getMainLooper()).postDelayed({
-            sendEvent("dataFromNativeAndroid", "Clover Infotech !")
+            sendEvent("dataFromNativeAndroid", "Clover Infotech How Are you hhhhh !")
         }, 3000)
     }
 //    fun getStaticMessage(promise: Promise) {

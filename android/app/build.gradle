@@ -107,12 +107,22 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
 }
+
+
+
 
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
     implementation "com.facebook.react:react-native:0.20.1"
+     implementation(name: 'shared-release', ext: 'aar')
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")
     } else {
